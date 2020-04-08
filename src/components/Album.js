@@ -142,6 +142,18 @@ class Album extends Component {
         }
     }
 
+    formatTime(secs) {
+        let mins = Math.floor(secs / 60);
+        let seconds = Math.floor(secs - mins * 60);
+
+        let timeString =
+            mins.toString().padStart(2, "0") +
+            ":" +
+            seconds.toString().padStart(2, "0");
+
+        return timeString ? timeString : "0:00";
+    }
+
     render() {
         return (
             <section className="album">
@@ -192,6 +204,7 @@ class Album extends Component {
                     handleNextClick={() => this.handleNextClick()}
                     handleTimeChange={(e) => this.handleTimeChange(e)}
                     handleVolumeChange={(e) => this.handleVolumeChange(e)}
+                    formatTime={(e) => this.formatTime(e)}
                 />
             </section>
         );
