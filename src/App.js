@@ -4,16 +4,24 @@ import "./App.css";
 import Landing from "./components/Landing";
 import Library from "./components/Library";
 import Album from "./components/Album";
+import "./components/style.css";
+import logo from "./images/music-jams-logo.png";
 
 function App() {
     return (
         <div className="App">
             <header>
                 <nav>
-                    <Link to="/">Landing</Link>
-                    <Link to="/library">Library</Link>
+                    <img src={logo} className="logo" />
+                    <div className="links">
+                        <Link to="/" className="link">
+                            Landing
+                        </Link>
+                        <Link to="/library" className="link">
+                            Library
+                        </Link>
+                    </div>
                 </nav>
-                <h1>Music Player</h1>
             </header>
             <main>
                 <Route exact path="/" component={Landing} />

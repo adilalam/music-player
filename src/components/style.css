@@ -1,0 +1,95 @@
+body,
+html {
+    background-image: url("../images/blurred_backgrounds/blur_bg_3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    background-color: rgba(48, 26, 65, 0.5);
+    opacity: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 0px;
+}
+
+img.logo {
+    width: 12%;
+    margin: 15px;
+}
+
+div.links {
+    margin: 15px;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+}
+
+.link {
+    margin: 10px;
+    padding: 10px;
+    background-color: #773565;
+    color: #ffebfa;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+.link:hover {
+    background-color: darkslateblue;
+}
+
+/* HERO */
+.hero-image {
+    background-image: linear-gradient(
+            rgba(48, 26, 65, 0.5),
+            rgba(48, 26, 65, 0.5)
+        ),
+        url("../images/hero-img.jpg");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1.hero-text {
+    margin: 0;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-size: 4em;
+    text-shadow: 1px 1px 1px #000;
+}
+
+/* SELLING POINTS */
+
+.selling-points {
+    border: 5px solid hotpink;
+    display: flex;
+    height: 250px;
+}
+
+.point {
+    border: 2px dashed violet;
+    margin: 20px;
+    padding: 10px;
+    flex: 1 1 0px;
+    background-color: rgba(48, 26, 65, 0.3);
+    border-radius: 10px;
+}
+
+h2.point-title {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+}
