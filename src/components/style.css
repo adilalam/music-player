@@ -74,22 +74,35 @@ h1.hero-text {
 /* SELLING POINTS */
 
 .selling-points {
-    border: 5px solid hotpink;
     display: flex;
-    height: 250px;
+    height: 100%;
 }
 
 .point {
-    border: 2px dashed violet;
+    border: 2px solid #703261;
     margin: 20px;
     padding: 10px;
     flex: 1 1 0px;
     background-color: rgba(48, 26, 65, 0.3);
     border-radius: 10px;
+    box-shadow: 1px 2px 10px 3px #ccc;
 }
 
 h2.point-title {
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     font-weight: 400;
+}
+
+.icon {
+    text-shadow: 1px 2px 10px 3px #ccc;
+    filter: drop-shadow(1px 1px 1px #777);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+    .selling-points {
+        flex-direction: column;
+    }
 }
