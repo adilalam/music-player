@@ -99,6 +99,27 @@ h2.point-title {
     filter: drop-shadow(1px 1px 1px #777);
 }
 
+/* LIBRARY */
+
+.library {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+img.album-cover {
+    max-width: 80%;
+}
+
+.libraryItem {
+    text-decoration: none;
+    color: white;
+}
+
+.libraryItem:hover {
+    opacity: 50%;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 480px) {
