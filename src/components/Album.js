@@ -158,40 +158,55 @@ class Album extends Component {
     render() {
         return (
             <section className="album">
-                <section id="album-info">
-                    <img
-                        id="album-cover-art"
-                        src={this.state.album.albumCover}
-                        alt="album cover art"
-                    />
-                    <div className="album-details">
-                        <h1 id="album-title">{this.state.album.title}</h1>
-                        <h2 className="artist">{this.state.album.artist}</h2>
-                        <div id="release-info">
-                            {this.state.album.releaseInfo}
+                <div id="album-organize">
+                    <section id="album-image">
+                        <img
+                            id="album-cover-art"
+                            src={this.state.album.albumCover}
+                            alt="album cover art"
+                        />
+                    </section>
+                    <div id="right-side">
+                        <div className="album-details">
+                            <h1 id="album-title">{this.state.album.title}</h1>
+                            <h2 className="artist">
+                                {this.state.album.artist}
+                            </h2>
+                            <div id="release-info">
+                                {this.state.album.releaseInfo}
+                            </div>
                         </div>
+
+                        <table id="song-list">
+                            <colgroup>
+                                <col id="song-number-column" />
+                                <col id="song-title-column" />
+                                <col id="song-duration-column" />
+                            </colgroup>
+                            <tbody>
+                                {this.state.album.songs.map((song, index) => (
+                                    <tr
+                                        key={index}
+                                        className="song"
+                                        onClick={() =>
+                                            this.handleSongClick(song)
+                                        }
+                                    >
+                                        <td>
+                                            {this.displayIndex(song, index)}
+                                        </td>
+                                        <td id="song-title" colSpan="3">
+                                            {song.title}
+                                        </td>
+                                        <td>
+                                            {this.formatTime(song.duration)}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
-                </section>
-                <table id="song-list">
-                    <colgroup>
-                        <col id="song-number-column" />
-                        <col id="song-title-column" />
-                        <col id="song-duration-column" />
-                    </colgroup>
-                    <tbody>
-                        {this.state.album.songs.map((song, index) => (
-                            <tr
-                                key={index}
-                                className="song"
-                                onClick={() => this.handleSongClick(song)}
-                            >
-                                <td>{this.displayIndex(song, index)}</td>
-                                <td>{song.title}</td>
-                                <td>{song.duration}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+                </div>
                 <PlayerBar
                     isPlaying={this.state.isPlaying}
                     currentSong={this.state.currentSong}
