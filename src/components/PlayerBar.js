@@ -5,27 +5,8 @@ class PlayerBar extends Component {
     render() {
         return (
             <section className="player-bar">
-                <section id="buttons">
-                    <button id="previous" onClick={this.props.handlePrevClick}>
-                        <span className="ion-skip-backward"></span>
-                    </button>
-                    <button
-                        id="play-pause"
-                        onClick={this.props.handleSongClick}
-                    >
-                        <span
-                            className={
-                                this.props.isPlaying ? "ion-pause" : "ion-play"
-                            }
-                        ></span>
-                    </button>
-                    <button id="next" onClick={this.props.handleNextClick}>
-                        <span className="ion-skip-forward"></span>
-                    </button>
-                </section>
-
                 <section id="time-control">
-                    <div className="current-time">
+                    <div className="current-time time">
                         {this.props.formatTime(this.props.currentTime)}
                     </div>
                     <input
@@ -39,9 +20,39 @@ class PlayerBar extends Component {
                         step="0.01"
                         onChange={this.props.handleTimeChange}
                     />
-                    <div className="total-time">
+                    <div className="total-time time">
                         {this.props.formatTime(this.props.duration)}
                     </div>
+                </section>
+
+                <section id="buttons">
+                    <button
+                        className="button seek"
+                        id="previous"
+                        onClick={this.props.handlePrevClick}
+                    >
+                        <span className="ion-skip-backward icon icon-seek"></span>
+                    </button>
+                    <button
+                        id="play-pause"
+                        onClick={this.props.handleSongClick}
+                        className="button"
+                    >
+                        <span
+                            className={
+                                this.props.isPlaying
+                                    ? "ion-pause icon"
+                                    : "ion-play icon"
+                            }
+                        ></span>
+                    </button>
+                    <button
+                        className="button seek"
+                        id="next"
+                        onClick={this.props.handleNextClick}
+                    >
+                        <span className="ion-skip-forward icon icon-seek"></span>
+                    </button>
                 </section>
 
                 <section id="volume-control">
@@ -49,6 +60,7 @@ class PlayerBar extends Component {
                     <input
                         type="range"
                         className="seek-bar"
+                        id="volume-bar"
                         value={this.props.volume}
                         max="1"
                         min="0"

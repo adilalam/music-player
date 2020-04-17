@@ -18,6 +18,7 @@ nav {
     align-items: center;
     height: 80px;
     margin-bottom: 0px;
+    border-bottom: 1px solid lavender;
 }
 
 img.logo {
@@ -123,7 +124,8 @@ img.album-cover {
 /* ALBUM */
 
 section.album {
-    border: 2px solid hotpink;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 div#album-organize {
@@ -184,10 +186,208 @@ td#song-title {
     width: 250px;
 }
 
+/* PLAYER BAR */
+
+section.player-bar {
+    background-color: rgba(48, 26, 65, 0.7);
+    padding-top: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    height: 70px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+button.button {
+    background: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    outline: none;
+}
+
+button.button:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+span.icon {
+    font-size: 25px;
+    color: white;
+}
+
+span.icon-seek {
+    font-size: 20px;
+}
+
+button.seek {
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+/* range inputs */
+
+input[type="range"] {
+    height: 25px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+    background: none;
+}
+input[type="range"]:focus {
+    outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #e0d5e3;
+    border-radius: 1px;
+    border: 0px solid #000000;
+}
+input[type="range"]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #681299;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #fef7ff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #e0d5e3;
+}
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #e0d5e3;
+    border-radius: 1px;
+    border: 0px solid #000000;
+}
+input[type="range"]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #681299;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #fef7ff;
+    cursor: pointer;
+}
+input[type="range"]::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+    background: #e0d5e3;
+    border: 0px solid #000000;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px #000000;
+}
+input[type="range"]::-ms-fill-upper {
+    background: #e0d5e3;
+    border: 0px solid #000000;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px #000000;
+}
+input[type="range"]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #681299;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #fef7ff;
+    cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+    background: #e0d5e3;
+}
+input[type="range"]:focus::-ms-fill-upper {
+    background: #e0d5e3;
+}
+
+section#time-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.time {
+    margin: 5px;
+}
+
+section#volume-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.icon {
+    margin: 5px;
+    font-size: 20px;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 480px) {
     .selling-points {
         flex-direction: column;
+    }
+
+    .library {
+        flex-direction: column;
+    }
+
+    a.libraryItem {
+        margin-bottom: 10px;
+    }
+
+    div#album-organize {
+        flex-direction: column;
+    }
+
+    div.album-details {
+        align-items: center;
+    }
+
+    table {
+        margin: 5px;
+        height: 250px;
+        width: 350px;
+    }
+
+    section.album {
+        margin-bottom: 150px;
+    }
+
+    section.player-bar {
+        padding-top: 10px;
+        margin-top: 10px;
+        flex-direction: column;
+        height: 150px;
+    }
+
+    div.App {
+        min-width: 100%;
+        height: 100%;
     }
 }
