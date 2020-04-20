@@ -11,6 +11,9 @@ class Library extends Component {
     }
 
     render() {
+        {
+            console.log(albumData);
+        }
         return (
             <div>
                 <h2 className="point-title">Select an album</h2>
