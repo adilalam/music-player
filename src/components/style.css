@@ -10,6 +10,16 @@ html {
 }
 
 /* NAVBAR */
+nav {
+    background-color: rgba(48, 26, 65, 0.5);
+    opacity: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid lavender;
+}
 
 /* HERO */
 .hero-image {
