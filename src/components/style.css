@@ -13,6 +13,7 @@ html {
 div#navbar {
     background-color: rgba(48, 26, 65, 0.5);
     opacity: 80%;
+    z-index: 1;
 }
 
 /* HERO */
