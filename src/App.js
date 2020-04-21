@@ -10,7 +10,6 @@ import logo from "./images/music-jams-logo.png";
 function App() {
     return (
         <div className="App">
-            <h1>test</h1>
             <header>
                 <div id="navbar">
                     <img src={logo} className="logo" />

@@ -20,6 +20,30 @@ div#navbar {
     border-bottom: 1px solid lavender;
 }
 
+img.logo {
+    width: 12%;
+    margin: 15px;
+}
+
+div.links {
+    margin: 15px;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+}
+
+.link {
+    margin: 10px;
+    padding: 10px;
+    background-color: #773565;
+    color: #ffebfa;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+.link:hover {
+    background-color: darkslateblue;
+}
+
 /* HERO */
 .hero-image {
     background-image: linear-gradient(
