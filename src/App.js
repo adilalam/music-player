@@ -12,7 +12,7 @@ function App() {
         <div className="App">
             <h1>test</h1>
             <header>
-                <nav>
+                <div id="navbar">
                     <img src={logo} className="logo" />
                     <div className="links">
                         <Link to="/" className="link">
@@ -22,7 +22,7 @@ function App() {
                             Library
                         </Link>
                     </div>
-                </nav>
+                </div>
             </header>
             <main>
                 <Route exact path="/" component={Landing} />
