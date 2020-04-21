@@ -4,7 +4,7 @@ import "./App.css";
 import Landing from "./components/Landing";
 import Library from "./components/Library";
 import Album from "./components/Album";
-import "./components/style.css";
+import "./styles.css";
 import logo from "./images/music-jams-logo.png";
 
 function App() {
