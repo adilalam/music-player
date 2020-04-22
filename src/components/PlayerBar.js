@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./style.css";
+import IosVolumeDown from "react-ionicons/lib/IosVolumeDown";
 
 class PlayerBar extends Component {
     render() {
@@ -56,7 +57,7 @@ class PlayerBar extends Component {
                 </section>
 
                 <section id="volume-control">
-                    <div className="icon ion-volume-low"></div>
+                    <div className="ion-volume-low icon"></div>
                     <input
                         type="range"
                         className="seek-bar"
